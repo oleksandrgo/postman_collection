@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "f37002cf-adec-4e23-ac1d-1453b29023ec",
+		"name": "Lesson 45",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1911365"
+	},
+	"item": [
+		{
+			"name": "Interceptor cookies",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Найголовніше що треба зробити, це встановити google extension\r",
+							"// Детальна інструкція https://learning.postman.com/docs/sending-requests/capturing-request-data/syncing-cookies/"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableCookies": false,
+				"followRedirects": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"{{$randomFirstName}}\",\r\n  \"lastName\": \"{{$randomLastName}}\",\r\n  \"email\": \"{{$randomEmail}}\",\r\n  \"password\": \"Qwerty12345\",\r\n  \"repeatPassword\": \"Qwerty12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qauto.forstudy.space/api/auth/signup",
+					"protocol": "https",
+					"host": [
+						"qauto",
+						"forstudy",
+						"space"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
